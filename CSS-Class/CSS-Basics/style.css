@@ -1,0 +1,35 @@
+/* <!-- link:css , External CSS--> */
+
+
+/* 
+element{
+    propertyName: propertyVa1ue;
+} 
+    */
+
+h3{
+    color: rebeccapurple;
+}
+
+h4, h5{
+    background-color: yellow;
+    color: blue;
+}
+
+ul li a {
+    color: burlywood;
+}
+
+a{
+    color: royalblue;
+}
+
+div p{
+    color: tomato;
+}
+
+div table *{
+    color: brown;
+    background-color: aquamarine;
+    border: 10 rgb(0, 0, 0);
+}
