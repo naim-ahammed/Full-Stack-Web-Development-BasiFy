@@ -33,3 +33,30 @@ div table *{
     background-color: aquamarine;
     border: 10 rgb(0, 0, 0);
 }
+
+section {
+    color: red;
+}
+
+#sec2{
+    background-color: rgb(102, 74, 38);
+    color: aqua;
+}
+
+#id1{
+    color: blueviolet;
+}
+
+.class1{
+    color: yellowgreen;
+}
+
+input[type]{
+    background-color: rgb(7, 54, 49);
+    color: darkblue;
+}
+
+input[type="text"]{
+    background-color: turquoise;
+    color: darkblue;
+}
