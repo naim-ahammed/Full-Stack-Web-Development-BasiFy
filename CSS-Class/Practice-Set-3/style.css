@@ -1,0 +1,59 @@
+#div{
+    height: 40px;
+    width: 100%;
+    padding: 10px 20px;
+    border-width: 3px;
+    background: black;
+    border-color: silver;
+    border-style: solid ; 
+    display: flex;
+    text-align:center;
+    justify-content: space-between;
+}
+
+.amazon{
+    text-align: left;
+    color: orange;
+    font-weight: bold;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.Account{
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.MyCard{
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.ContactUs{
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+#divScarch{
+    display: flex;
+    margin-right: 8%;
+}
+
+.textBox{
+height:fit-content;
+margin-top:10px;
+}
+
+
+.Search{
+    text-align: center;
+    height:fit-content;
+    margin-top:10px;
+    background-color: rgb(213, 164, 72);
+    margin-left: 5px;
+    
+}
+.Search:hover {background-color: orange}
