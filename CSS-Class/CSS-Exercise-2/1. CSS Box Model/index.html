@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model</title>
+  <style>
+    /* Write your CSS code here */
+
+    div{
+      height: 200px;
+      width: 200px;
+      display: inline-block;
+    }
+
+    #Box1{
+      background-color: cadetblue;
+      border: 10px solid black;
+
+      position: static;
+
+      /* padding: 20px; */
+
+      padding-top: 0px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    }
+
+    p{
+      margin: 0,0,0,0;
+    }
+
+    #Box2{
+      background-color: gold;
+      border-top: 20px;
+      border-bottom: 20px;
+      border-left: 10px;
+      border-right: 10px;
+      border-color: black;
+      border-style: solid;
+      position: fixed;
+      top: 257px;
+
+    }
+
+    #Box3{
+      background-color: indianred;
+      border: 10px solid black;
+      position: fixed;
+      top: 496px;
+      left: 48px;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- TODOs:
+1. Create 3 Boxes using the div element.
+2. Set their sizes to 200px heigh by 200px wide.
+3. Set different background colors for each of the boxes (I used cadetblue, gold and indianred).
+4. Add a paragraph <p> element into the first div and add the following words:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.
+5. Set the 1st div to have 20px padding all around with a black 10px border.
+6. Fix the style of the <p> element to remove all margins.
+Hint: Use the CSS inspector in Chrome.
+7. Set the 2nd div to have a 20px border on top and bottom and 10px border left and right. (See goal image)
+8. Set the 3rd div to have a 10px border 
+9. Set the margins for the divs so that each box corner touches the other. (See the goal image)
+-->
+
+
+<div id="Box1">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.</p>
+</div>
+<div id="Box2"></div>
+<div id="Box3"></div>
+
+
+
+
+</body>
+
+</html>
