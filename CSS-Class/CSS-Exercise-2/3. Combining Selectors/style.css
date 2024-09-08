@@ -1,1 +1,22 @@
 /* Write your code here: */
+
+h1, h2{
+    color: #8a2be2;
+}
+
+.p{
+color: #b22222;
+}
+
+.li1{
+    color: blue;
+}
+
+.li2{
+    color: green;
+}
+
+.ul-p{
+
+    font-size: 0.5rem;
+}
