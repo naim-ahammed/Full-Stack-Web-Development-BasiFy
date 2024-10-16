@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="https://formspree.io/f/xqakkdzr" method="post">
+        <h2>Sample Form</h2>
+        <label for="name">Name: *</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+        <label for="email">Email: *</label>
+        <input type="email" id="email" name="email" required placeholder="abc@company.com">
+        <input type="hidden" id="hiddenField" name="hiddenField" value="hiddenValue">
+        <div class="radio-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="bangladesh">Bangladesh</option>
+            <option value="saudiArabia">Saudi Arabia</option>
+            <option value="USA">USA</option>
+            <option value="canada">Canada</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
