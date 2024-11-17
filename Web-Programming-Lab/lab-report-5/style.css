@@ -1,0 +1,88 @@
+.header{
+    /* display: flex; */
+    background: #524b4b;
+    height: 75px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(236, 241, 245);
+ 
+ 
+ }
+ 
+ 
+ nav a{
+    text-decoration: none;
+    padding: 3px;
+    color: white;
+    background-color: #8d7676;
+ }
+ 
+ 
+ .about__1{
+    display: flex;
+ flex-direction: column;
+ justify-content: center;
+ margin: 20px;
+ 
+ 
+ }
+ .about__2{
+ background: #d8c2c2;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+ padding: 10px;
+ 
+ 
+ }
+ 
+ .Projects{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+ }
+ 
+ 
+ .Project__2{
+    background-color: aqua;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+ 
+ 
+ }
+ .Project__3{
+    background-color: aqua;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+ }
+ .Project__4{
+    background-color: aqua;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+ }
+ /* .contact__div{
+    background-color: #524b4b;
+    display: flex;
+    justify-content: center;
+   
+ } */
+ .contact{
+    display: flex;
+    flex-direction: column;
+    background: #882828;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 300px;
+ }
+ 
+ 
+ /* .email{
+    display: none;
+    color: aqua;
+ } */
+ 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Problem Description: 
+Imagine you are creating a personal portfolio website to showcase your projects and provide visitors with a way to contact you. The homepage should be welcoming, informative, and interactive to engage potential employers or collaborators.
+
+Task:
+Build a simple, single-page personal portfolio website that includes the following features:
+
+Structure and Content:
+Header Section: Contains your name and a navigation menu.
+About Section: A brief paragraph about yourself.
+Projects Section: Showcase at least two projects with titles and short descriptions.
+Contact Section: Includes a button that visitors can click to reveal your email address.
+
+Styling:
+Use CSS to style the page, ensuring a visually appealing layout.
+Apply at least two different CSS properties (e.g., background-color, font-size, margin, padding, border, etc.) to enhance the design.
+
+Interactivity:
+Implement a JavaScript function that is triggered when the "Contact Me" button is clicked. This function should reveal your hidden email address within the Contact Section without reloading the page.
+Answer (HTML + CSS + JavaScript Code + Screenshot of the Output): -->
+
+        <header class="header">
+            <h1>Md Naim Ahammed</h1>
+            <nav class="nav">
+                <!-- <ul>
+                   <ol>
+                       About
+                   </ol>
+                   <ol>
+                       Projects
+                   </ol>
+                   <ol>
+                       Contact
+                   </ol>
+               </ul> -->
+
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+    <section>
+        <div class="about__1">
+            <div class="about__2">
+                <h2>about me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, tempora quaerat accusantium et
+                    deserunt consectetur natus facilis, ipsam minus repudiandae unde, veritatis libero placeat? Repellat
+                    et explicabo excepturi eos sint?</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="Projects">
+            <div class="Project__2">
+                <h2>Project 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo minima molestias quia!
+                    Accusamus eveniet totam consequatur inventore, repudiandae fuga. Incidunt ex quisquam rerum vel!
+                    Illo libero excepturi aliquid illum!</p>
+            </div>
+
+            <div class="Project__3">
+                <h2>Project 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo minima molestias quia!name
+                    Accusamus eveniet totam consequatur inventore, repudiandae fuga. Incidunt ex quisquam rerum vel!
+                    Illo libero excepturi aliquid illum!</p>
+            </div>
+
+            <div class="Project__4">
+                <h2>Project 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo minima molestias quia!
+                    Accusamus
+                    eveniet totam consequatur inventore, repudiandae fuga. Incidunt ex quisquam rerum vel! Illo libero
+                    excepturi aliquid illum!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact__div">
+            <div class="contact">
+                <h2>Contact Me</h2>
+                <form action="">
+                    <label for="text"> Name:
+                        <input type="text">
+                    </label> <br> <br>
+
+                    <label for="number"> phone:
+                        <input type="number">
+                    </label> <br>
+                    <br>
+                    <label for=""> Email:
+                        <input type="text">
+                    </label>
+                </form> <br>
+                <button class="contact__me" onclick="showEmail()">Contact Me</button>
+                <p class="email" style="display: none;">md.naim.engr@gmail.com</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
