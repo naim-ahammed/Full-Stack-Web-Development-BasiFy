@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, vitae!</h1>
+
+    <h2>JESON</h2>
+
+    <script>
+        const user = {
+            name : "naim",
+            id : 221002599,
+            user2 : {
+            name : "naim",
+            id : 221002599,
+            age : [1,2,3],
+            friend : ["naim","naim","naim"]
+            },
+            age : [1,2,3],
+            friend : ["naim","naim","naim"]
+        };
+
+        const userJESON = JSON.stringify(user);
+        console.log(userJESON);
+
+        const userFromJeson = JSON.parse(userJESON);
+        console.log(userFromJeson);
+        </script>
+</body>
+</html>
