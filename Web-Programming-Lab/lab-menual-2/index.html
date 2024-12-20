@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Additional styles for formatting demonstration */
+        blockquote {
+            border-left: 2px solid #ccc; /* Styling for blockquote */
+            margin: 1em 0; /* Margin around blockquote */
+            padding-left: 1em; /* Padding inside blockquote */
+            color: #555; /* Text color for blockquote */
+        }
+        .custom-div {
+            background-color: #f0f0f0; /* Light gray background for div */
+            padding: 10px; /* Padding inside div */
+            border-radius: 5px; /* Rounded corners */
+        }
+        .inline-span {
+            color: blue; /* Text color for span */
+            font-weight: bold; /* Bold text for span */
+        }
+
+        table {
+            border-collapse: collapse; /* Ensures there is no space between cells */
+        }
+        th, td {
+            border: 2px solid black; /* Sets the border for table cells */
+            padding: 8px; /* Adds space inside cells */
+            text-align: center; /* Default text alignment for cells */
+        }
+
+        /* *{
+            font-style: normal; 
+        } */
+    </style>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+        <!-- Creates preformatted text, preserving spaces and line breaks as they appear in the code -->
+        <pre>
+            This is preformatted text.
+                Indented lines will keep their spaces.
+                </pre>
+            
+                <!-- Creates headlines, with H1 being the largest and H6 the smallest -->
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            
+                <!-- Creates bold text; <strong> is preferred for accessibility -->
+                <b>This text is bold (use <strong> instead)</b><br>
+                <strong>This text is strongly emphasized (bold)</strong>
+            
+                <!-- Creates italicized text; <em> is preferred for accessibility -->
+                <!-- <i>This text is italicized (use <em> instead)</i><br> -->
+                <em>This text is emphasized (italicized)</em>
+            
+                <!-- Creates typewriter-style (monospace) text -->
+                <tt>This text is typewriter style (monospace)</tt><br>
+            
+                <!-- Used to define source code, typically in monospace font -->
+                <code>print("Hello, World!")</code>
+            
+                <!-- Creates a citation, often styled in italics -->
+                <cite>This is a citation text.</cite><br>
+            
+                <!-- Creates an address section, usually italicized and often used for contact info -->
+                <address>
+                    Contact us at:<br>
+                    1234 Elm Street, Suite 100<br>
+                    Springfield, XY 12345<br>
+                    Email: info@example.com
+                </address>
+            
+                <!-- Emphasizes a word (usually processed in italics) -->
+                <p>This sentence contains an <em>emphasized</em> word.</p>
+            
+                <!-- Emphasizes a word (usually processed in bold) -->
+                <p>This sentence contains a <strong>strongly emphasized</strong> word.</p>
+            
+                <!-- Sets the font size (1 to 7); should use CSS instead -->
+                 
+                <font size="4">This text has a font size of 4 (use CSS for font size)</font><br>
+            
+                <!-- Sets the font color; should use CSS instead -->
+                <font color="blue">This text is blue (use CSS for color)</font><br>
+            
+                <!-- Defines the font family; should use CSS instead -->
+                <font face="Courier">This text is in Courier font (use CSS for font face)</font> 
+
+                <br> <br> <hr>
+                <!--  -->
+                    <h1>Links Example</h1>
+
+    <!-- Creates a hyperlink to a URL -->
+    <p>
+        Visit our website: 
+        <a href="https://www.example.com">clickable text</a>
+    </p>
+
+    <!-- Creates a hyperlink to an email address -->
+    <p>
+        For inquiries, email us at: 
+        <a href="mailto:info@example.com">info@example.com</a>
+    </p>
+
+    <!-- Creates a target location within a document -->
+    <h2>Contents</h2>
+    <p>
+        Jump to the section about HTML links:
+        <a href="#html-links">Go to HTML Links</a>
+    </p>
+
+    <!-- Target location -->
+    <h2 id="html-links">HTML Links</h2>
+    <p>
+        This section discusses the various types of links you can use in HTML.
+    </p>
+
+    <!-- Another example of creating a link to a target location -->
+    <p>
+        You can also return to the top: 
+        <a href="#top">Back to Top</a>
+    </p>
+
+    <p id="top">This is the top of the document.</p>
+
+    <br> <br> <hr>
+    <!--  -->
+
+    <h1>Links Example</h1>
+
+    <!-- Creates a hyperlink to a URL -->
+    <p>
+        Visit our website: 
+        <a href="https://www.example.com">clickable text</a>
+    </p>
+
+    <!-- Creates a hyperlink to an email address -->
+    <p>
+        For inquiries, email us at: 
+        <a href="mailto:info@example.com">info@example.com</a>
+    </p>
+
+    <!-- Creates a target location within a document -->
+    <h2>Contents</h2>
+    <p>
+        Jump to the section about HTML links:
+        <a href="#html-links">Go to HTML Links</a>
+    </p>
+
+    <!-- Target location -->
+    <h2 id="html-links">HTML Links</h2>
+    <p>
+        This section discusses the various types of links you can use in HTML.
+    </p>
+
+    <!-- Another example of creating a link to a target location -->
+    <p>
+        You can also return to the top: 
+        <a href="#top">Back to Top</a>
+    </p>
+
+    <p id="top">This is the top of the document.</p>
+
+    <br> <br> <hr>
+    <!--  -->
+
+<h1>Formatting Example</h1>
+
+    <!-- Creates a new paragraph -->
+    <p>This is a paragraph demonstrating the <code>&lt;p&gt;</code> tag.</p>
+
+    <!-- Inserts a line break (carriage return) -->
+    <p>This is the first line.<br>This is the second line after a line break.</p>
+
+    <!-- Puts content in a quote - indents text from both sides -->
+    <blockquote>
+        This is a quote. Blockquotes are used for quotes and will be indented on both sides.
+    </blockquote>
+
+    <!-- Used to format block content with CSS -->
+    <div class="custom-div">
+        This is a div container. You can apply CSS styles to block elements like this one.
+    </div>
+
+    <!-- Used to format inline content with CSS -->
+    <p>This is a <span class="inline-span">span element</span> within a paragraph. It allows for inline formatting.</p>
+
+     <br> <br> <hr>
+    <!--  -->
+
+    <h1>Lists Example</h1>
+
+    <!-- Creates an unordered list -->
+    <h2>Unordered List</h2>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+
+    <!-- Creates an ordered list with a starting number -->
+    <h2>Ordered List</h2>
+    <ol start="3">
+        <li>Item starting from number 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+
+    <!-- Creates a definition list -->
+    <h2>Definition List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        
+        <dt>JavaScript</dt>
+        <dd>A programming language commonly used in web development</dd>
+    </dl>
+
+    <br> <br> <hr>
+    <!--  -->
+
+    <h1>Graphical Elements Example</h1>
+
+    <!-- Inserts a simple horizontal rule -->
+    <hr>
+
+    <!-- Horizontal rule with custom height and width -->
+    <hr size="5" width="50%">
+
+    <!-- Horizontal rule without shadow -->
+    <hr noshade>
+
+    <!-- Image example -->
+    <h2>Image with Attributes</h2>
+    <p>Here's an example of an image with different attributes:</p>
+
+    <!-- Adds an image with src, width, height, border, alignment, and alt text -->
+    <img src="kitten.jpeg" 
+         alt="Placeholder image"
+         width="150" 
+         height="150" 
+         border="2" 
+         align="left">
+
+    <p>This image is aligned to the left, with a 2-pixel border, and has a width and height of 150 pixels each. It includes alt text for accessibility.</p> <br> <br> <br> <br> <br> <br> <br> <br> <hr>
+    <!--  -->
+    
+    <h1>Form Elements Example</h1>
+
+    <!-- Defines a form -->
+    <form action="/submit_form" method="post">
+
+        <!-- Creates a pulldown menu -->
+        <h2>Choose a Country</h2>
+        <select name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+        <!-- Creates a scrolling menu with multiple selections -->
+        <h2>Select Your Hobbies</h2>
+        <select multiple name="hobbies" size="3">
+            <option value="reading">Reading</option>
+            <option value="sports">Sports</option>
+            <option value="music">Music</option>
+            <option value="travel">Travel</option>
+        </select>
+
+        <!-- Creates a text area -->
+        <h2>Your Feedback</h2>
+        <textarea name="feedback" cols="30" rows="5"></textarea>
+
+        <!-- Creates checkboxes -->
+        <h2>Subscribe to Newsletters</h2>
+        <input type="checkbox" name="newsletter" value="daily"> Daily<br>
+        <input type="checkbox" name="newsletter" value="weekly" checked> Weekly (pre-checked)<br>
+
+        <!-- Creates radio buttons -->
+        <h2>Choose Your Gender</h2>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female" checked> Female (pre-checked)
+
+        <!-- Creates a one-line text input -->
+        <h2>Your Name</h2>
+        <input type="text" name="username" size="30">
+
+        <!-- Creates submit and reset buttons -->
+        <h2>Submit Your Response</h2>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset Form">
+
+        <!-- Creates a submit button using an image -->
+        <h2>Image Submit Button</h2>
+        <input type="image" name="imageSubmit" src="kitten.jpeg" border="0" alt="Submit">
+
+    </form>
+
+    <br> <br> <hr>
+    <!--  -->
+
+<h1>HTML5 Input Types Example</h1>
+
+    <form action="/submit_form" method="post">
+        <!-- Input for email addresses -->
+        <h2>Email Address</h2>
+        <input type="email" name="user_email" required placeholder="Enter your email">
+
+        <!-- Input for URLs -->
+        <h2>Website URL</h2>
+        <input type="url" name="website_url" required placeholder="Enter your website URL">
+
+        <!-- Input for numbers -->
+        <h2>Age</h2>
+        <input type="number" name="user_age" min="0" max="120" placeholder="Enter your age">
+
+        <!-- Input for range of numbers -->
+        <h2>Rating (1 to 10)</h2>
+        <input type="range" name="user_rating" min="1" max="10" value="5">
+
+        <!-- Input for date selection -->
+        <h2>Select a Date</h2>
+        <input type="date" name="event_date">
+
+        <!-- Input for month selection -->
+        <h2>Select a Month</h2>
+        <input type="month" name="event_month">
+
+        <!-- Input for week selection -->
+        <h2>Select a Week</h2>
+        <input type="week" name="event_week">
+
+        <!-- Input for time selection -->
+        <h2>Select a Time</h2>
+        <input type="time" name="event_time">
+
+        <!-- Input for search -->
+        <h2>Search</h2>
+        <input type="search" name="search_query" placeholder="Search...">
+
+        <!-- Input for color selection -->
+        <h2>Favorite Color</h2>
+        <input type="color" name="favorite_color" value="#ff0000">
+
+        <!-- Submit button -->
+        <h2>Submit Your Information</h2>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br> <br> <hr>
+    <!--  -->
+
+    <h1>HTML Table Example</h1>
+
+    <!-- Creates a table -->
+    <table width="80%" border="1" cellspacing="0" cellpadding="8">
+        <caption>Employee Details</caption> <!-- Table caption -->
+        
+        <!-- Table header -->
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+
+        <!-- Table rows -->
+        <tr>
+            <td>John Doe</td>
+            <td>Software Engineer</td>
+            <td>Development</td>
+            <td>$80,000</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>Project Manager</td>
+            <td>Operations</td>
+            <td>$95,000</td>
+        </tr>
+        <tr>
+            <td>Emily Johnson</td>
+            <td>Designer</td>
+            <td>Marketing</td>
+            <td>$70,000</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Michael Brown</td> <!-- Cell spans 2 rows -->
+            <td>Senior Developer</td>
+            <td>Development</td>
+            <td>$85,000</td>
+        </tr>
+        <tr>
+            <td>Team Lead</td>
+            <td>Development</td>
+            <td>$90,000</td>
+        </tr>
+        <tr>
+            <td colspan="3">Average Salary</td> <!-- Cell spans 3 columns -->
+            <td>$84,000</td>
+        </tr>
+    </table>
+</body>
+</html>

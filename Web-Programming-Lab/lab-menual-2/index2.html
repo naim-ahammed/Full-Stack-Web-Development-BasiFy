@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        blockquote {
+            border-left: 2px solid #ccc;
+            margin: 1em 0;
+            padding-left: 1em;
+            color: #555;
+        }
+        .custom-div {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .inline-span {
+            color: blue;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+
+        *{
+            font-style: normal; 
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        This is preformatted text.
+            Indented lines will keep their spaces.
+    </pre>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <b>This text is bold (use <strong> instead)</b><br>
+    <strong>This text is strongly emphasized (bold)</strong><br>
+    <i>This text is italicized (use <em> instead)</i><br>
+    <em>This text is emphasized (italicized)</em><br>
+    <tt>This text is typewriter style (monospace)</tt><br>
+    <code>print("Hello, World!")</code><br>
+    <cite>This is a citation text.</cite><br>
+    <address>
+        Contact us at:<br>
+        1234 Elm Street, Suite 100<br>
+        Springfield, XY 12345<br>
+        Email: info@example.com
+    </address>
+    <p>This sentence contains an <em>emphasized</em> word.</p>
+    <p>This sentence contains a <strong>strongly emphasized</strong> word.</p>
+
+    <h1>Links Example</h1>
+    <p>Visit our website: <a href="https://www.example.com">clickable text</a></p>
+    <p>For inquiries, email us at: <a href="mailto:info@example.com">info@example.com</a></p>
+
+    <h2>Contents</h2>
+    <p>Jump to the section about HTML links: <a href="#html-links">Go to HTML Links</a></p>
+
+    <h2 id="html-links">HTML Links</h2>
+    <p>This section discusses the various types of links you can use in HTML.</p>
+    <p>You can also return to the top: <a href="#top">Back to Top</a></p>
+    <p id="top">This is the top of the document.</p>
+
+    <h1>Formatting Example</h1>
+    <p>This is a paragraph demonstrating the <code>&lt;p&gt;</code> tag.</p>
+    <p>This is the first line.<br>This is the second line after a line break.</p>
+    <blockquote>This is a quote. Blockquotes are used for quotes and will be indented on both sides.</blockquote>
+    <div class="custom-div">This is a div container. You can apply CSS styles to block elements like this one.</div>
+    <p>This is a <span class="inline-span">span element</span> within a paragraph. It allows for inline formatting.</p>
+
+    <h1>Lists Example</h1>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+    <h2>Ordered List</h2>
+    <ol start="3">
+        <li>Item starting from number 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+    <h2>Definition List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>JavaScript</dt>
+        <dd>A programming language commonly used in web development</dd>
+    </dl>
+
+    <h1>Graphical Elements Example</h1>
+    <hr>
+    <hr size="5" width="50%">
+    <hr noshade>
+    <h2>Image with Attributes</h2>
+    <p>Here's an example of an image with different attributes:</p>
+    <img src="kitten.jpeg" alt="Placeholder image" width="150" height="150" border="2" align="left">
+    <p>This image is aligned to the left, with a 2-pixel border, and has a width and height of 150 pixels each. It includes alt text for accessibility.</p>
+
+    <h1>Form Elements Example</h1>
+    <form action="/submit_form" method="post">
+        <h2>Choose a Country</h2>
+        <select name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+        <h2>Select Your Hobbies</h2>
+        <select multiple name="hobbies" size="3">
+            <option value="reading">Reading</option>
+            <option value="sports">Sports</option>
+            <option value="music">Music</option>
+            <option value="travel">Travel</option>
+        </select>
+
+        <h2>Your Feedback</h2>
+        <textarea name="feedback" cols="30" rows="5"></textarea>
+
+        <h2>Subscribe to Newsletters</h2>
+        <input type="checkbox" name="newsletter" value="daily"> Daily<br>
+        <input type="checkbox" name="newsletter" value="weekly" checked> Weekly (pre-checked)<br>
+
+        <h2>Choose Your Gender</h2>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+
+        <h2>HTML5 Input Types</h2>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" size="30"><br>
+        <label for="website">Your Website:</label>
+        <input type="url" id="website" name="website" size="30"><br>
+        <label for="color">Choose a Color:</label>
+        <input type="color" id="color" name="color"><br>
+
+        <h2>Your Name:</h2>
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" size="30"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Table Example</h1>
+    <table>
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start Date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Software Engineer</td>
+                <td>New York</td>
+                <td>29</td>
+                <td>2016/11/28</td>
+                <td>$120,000</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Project Manager</td>
+                <td>London</td>
+                <td>32</td>
+                <td>2018/06/12</td>
+                <td>$110,000</td>
+            </tr>
+            <tr>
+                <td>Sam Wilson</td>
+                <td>Designer</td>
+                <td>San Francisco</td>
+                <td>27</td>
+                <td>2019/03/15</td>
+                <td>$95,000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
