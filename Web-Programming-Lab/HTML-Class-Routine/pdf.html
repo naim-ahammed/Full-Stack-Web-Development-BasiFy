@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF.js Example</title>
+</head>
+<body>
+  <h1>PDF.js Example</h1>
+  <canvas id="pdfCanvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script>
+    // URL or local path to the PDF
+    const pdfUrl = 'your-pdf-file.pdf';
+
+    // Set up the canvas element
+    const canvas = document.getElementById('pdfCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Load the PDF
+    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+      // Get the first page
+      pdf.getPage(1).then(page => {
+        // Set scale and viewport
+        const scale = 1.5;
+        const viewport = page.getViewport({ scale });
+
+        // Resize the canvas to match the page
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        // Render the page onto the canvas
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        page.render(renderContext);
+      });
+    }).catch(error => {
+      console.error('Error loading PDF:', error);
+    });
+  </script>
+</body>
+</html>

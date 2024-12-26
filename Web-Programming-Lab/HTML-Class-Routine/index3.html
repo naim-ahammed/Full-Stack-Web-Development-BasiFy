@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Routine Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    #upload-section {
+      margin-bottom: 20px;
+    }
+    #upload-section input {
+      padding: 10px;
+    }
+  </style>
+  <!-- Include PDF.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+  <h1>University Routine Manager</h1>
+  <div id="upload-section">
+    <input type="file" id="fileInput" accept=".pdf" />
+    <button onclick="loadRoutine()">Upload and Display</button>
+  </div>
+  <div id="routine-display">
+    <table id="routineTable">
+      <thead>
+        <tr>
+          <th>Day/Time</th>
+          <th>8:30AM - 9:45AM</th>
+          <th>9:45AM - 11:00AM</th>
+          <th>11:00AM - 12:15PM</th>
+          <th>12:15PM - 1:30PM</th>
+          <th>Break 30 min</th>
+          <th>2:00PM - 3:15PM</th>
+          <th>3:15PM - 4:30PM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Routine rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function loadRoutine() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('Please select a PDF file!');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const pdfData = event.target.result;
+        parsePDF(pdfData);
+      };
+      reader.readAsArrayBuffer(file);
+    }
+
+    function parsePDF(pdfData) {
+      // Load the PDF data into PDF.js
+      pdfjsLib.getDocument(pdfData).promise.then(function(pdf) {
+        let pageNum = 1;
+        let pageText = '';
+
+        // Loop through each page to extract text
+        const totalPages = pdf.numPages;
+        const extractTextFromPage = function(pageNumber) {
+          pdf.getPage(pageNumber).then(function(page) {
+            page.getTextContent().then(function(textContent) {
+              textContent.items.forEach(function(item) {
+                pageText += item.str + ' ';
+              });
+
+              if (pageNumber < totalPages) {
+                extractTextFromPage(pageNumber + 1);
+              } else {
+                // After all pages are processed, display the routine
+                displayRoutine(pageText);
+              }
+            });
+          });
+        };
+
+        extractTextFromPage(pageNum);
+      });
+    }
+
+    function displayRoutine(text) {
+      const tbody = document.querySelector('#routineTable tbody');
+      tbody.innerHTML = ''; // Clear existing rows
+
+      const days = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+      const timeSlots = ['8:30AM - 9:45AM', '9:45AM - 11:00AM', '11:00AM - 12:15PM', '12:15PM - 1:30PM', 'Break 30 min', '2:00PM - 3:15PM', '3:15PM - 4:30PM'];
+
+      // Parse the routine text (assuming it's in a known format)
+      const routine = {};
+
+      // Example text processing (you will need to adapt this based on how the routine is formatted in the PDF)
+      const rows = text.split('\n');
+      rows.forEach(row => {
+        const parts = row.split(' ');
+        if (parts.length > 1) {
+          const day = parts[0];
+          const timeSlot = parts[1];
+          const course = parts.slice(2).join(' ');
+
+          if (!routine[day]) routine[day] = {};
+          routine[day][timeSlot] = course;
+        }
+      });
+
+      // Populate the table
+      days.forEach(day => {
+        const row = document.createElement('tr');
+        const dayCell = document.createElement('td');
+        dayCell.textContent = day;
+        row.appendChild(dayCell);
+
+        timeSlots.forEach(slot => {
+          const cell = document.createElement('td');
+          cell.textContent = routine[day]?.[slot] || '';
+          row.appendChild(cell);
+        });
+
+        tbody.appendChild(row);
+      });
+    }
+  </script>
+  <script src="PDF.js"></script>
+</body>
+</html>
