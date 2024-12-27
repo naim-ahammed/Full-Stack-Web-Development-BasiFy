@@ -1,0 +1,24 @@
+
+        table { 
+            width: 80%; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
+        }
+        th, td { 
+            padding: 8px; 
+            border: 1px solid #ddd; 
+        }
+        th { 
+            background-color: #ed6b28; 
+            color: white; 
+        }
+        tr:nth-child(even) { 
+            background-color: #f2f2f2; 
+        }
+        #loading { 
+            text-align: center; 
+            font-size: 18px; 
+        }
+        .link__a{
+            color: black;
+        }
