@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API Request</title>
+</head>
+<body>
+    <h1>GitHub API Request</h1>
+    <label for="id">Enter Your ID:</label>
+    <input type="text" id="id" placeholder="Enter your ID" />
+    <button onclick="handleRequest()">Submit</button>
+
+    <h2>Response:</h2>
+    <pre id="response"></pre>
+
+    <script>
+        function handleRequest() {
+            const id = document.getElementById("id").value.trim();
+            const responseDiv = document.getElementById("response");
+
+            if (!id || isNaN(id)) {
+                responseDiv.textContent = "Please enter a valid numeric ID.";
+                return;
+            }
+
+            // Determine operation based on ID (GET for even, POST for odd)
+            if (id % 2 === 0) {
+                performGetRequest();
+            } else {
+                performPostRequest();
+            }
+        }
+
+        function performGetRequest() {
+            const url = "https://api.github.com/naim-ahammed/Problems-Solving";
+
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/vnd.github+json"
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error(`GET request failed with status: ${response.status}`);
+                    }
+                })
+                .then(data => {
+                    document.getElementById("response").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById("response").textContent = `Error: ${error.message}`;
+                });
+        }
+
+        function performPostRequest() {
+            const url = "https://api.github.com/repos/your-username/your-repository/issues";
+
+            const payload = {
+                title: "Sample Issue",
+                body: "This issue was created via POST request example.",
+                labels: ["bug"]
+            };
+
+            const headers = {
+                "Authorization": "Bearer your_token", // Replace with your GitHub token
+                "Accept": "application/vnd.github+json",
+                "Content-Type": "application/json"
+            };
+
+            fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(payload)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error(`POST request failed with status: ${response.status}`);
+                    }
+                })
+                .then(data => {
+                    document.getElementById("response").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById("response").textContent = `Error: ${error.message}`;
+                });
+        }
+    </script>
+</body>
+</html>
