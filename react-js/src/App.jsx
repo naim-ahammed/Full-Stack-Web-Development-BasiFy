@@ -157,28 +157,67 @@
 // export default App
 
 
+// =========================================== 
+
+// import React from 'react';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FunctionName></FunctionName>
+//     </div>
+//   );
+// }
+
+// //React Components
+// function FunctionName(){
+//   return(
+//     <div>
+//     <h1>function Name</h1>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// =========================================== 
 
 import React from 'react';
 
-const App = () => {
+function App() {
+  const nayoks = ['bappa raz', 'salman']
   return (
     <div>
-      <FunctionName></FunctionName>
+      <Nayok name="sakib" age="57" > </Nayok>
+      <Nayok name="fahim" age="52" > </Nayok>
+      <Nayok name="khan" age="50" > </Nayok>
+      <Nayok name={nayoks[1]}  > </Nayok>
+
+
     </div>
-  );
+  )
 }
 
-//React Components
-function FunctionName(){
-  return(
-    <div>
-    <h1>function Name</h1>
+function Nayok(props){
+  // console.log(props.name)
+  //css obj
+  const myStyle = {
+    color: "blue",
+    backgroundColor: "yellow"
+  }
+
+  return (
+    <div style={{border:'2px solid red', textAlign:'center', padding: '10px'}}>
+        <h1 >ami nayok - {props.name} </h1>
+        <h1 >my age is - {props.age || 20 } </h1>
+
+        <button style={myStyle}> click here</button>
+
     </div>
   );
 }
 
 export default App;
-
 
 
 
