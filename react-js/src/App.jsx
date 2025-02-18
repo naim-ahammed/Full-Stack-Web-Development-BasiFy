@@ -182,30 +182,50 @@
 
 // =========================================== 
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
+
+    const [users, setUsers] = useState([]); // Renamed 'count' to 'users'
+
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res) => res.json())
+            .then((data) => setUsers(data)) // Store fetched data in state
+            .catch((error) => console.error("Error fetching data:", error));
+    }, []);
+
   const nayoks = ['bappa raz', 'salman']
   return (
+
     <div>
       <Nayok name="sakib" age="57" > </Nayok>
       <Nayok name="fahim" age="52" > </Nayok>
       <Nayok name="khan" age="50" > </Nayok>
       <Nayok name={nayoks[1]}  > </Nayok>
 
+    <div>
+      <ul>
+        {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+        ))}
+     </ul>
+    </div>
 
     </div>
+
+
+    
   )
 }
 
 function Nayok(props){
-  // console.log(props.name)
+  // console.log(props)
   //css obj
   const myStyle = {
     color: "blue",
     backgroundColor: "yellow"
   }
-
   return (
     <div style={{border:'2px solid red', textAlign:'center', padding: '10px'}}>
         <h1 >ami nayok - {props.name} </h1>
